@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<map>
+	<mapping universe=0 propertyNum=0  deviceType=1 row=0 col=1 >esc</mapping>
+	<mapping universe=0 propertyNum=1  deviceType=1 row=0 col=2 >F1</mapping>
+	<mapping universe=0 propertyNum=2  deviceType=1 row=0 col=3 >F2</mapping>
+	<mapping universe=0 propertyNum=3  deviceType=1 row=0 col=4 >F3</mapping>
+	<mapping universe=0 propertyNum=4  deviceType=1 row=0 col=5 >F4</mapping>
+	<mapping universe=0 propertyNum=5  deviceType=1 row=0 col=6 >F5</mapping>
+	<mapping universe=0 propertyNum=6  deviceType=1 row=0 col=7 >F6</mapping>
+	<mapping universe=0 propertyNum=7  deviceType=1 row=0 col=8 >F7</mapping>
+	<mapping universe=0 propertyNum=8  deviceType=1 row=0 col=9 >F8</mapping>
+	<mapping universe=0 propertyNum=9  deviceType=1 row=0 col=10>F9</mapping>
+	<mapping universe=0 propertyNum=10 deviceType=1 row=0 col=11>F10</mapping>
+	<mapping universe=0 propertyNum=11 deviceType=1 row=0 col=12>F11</mapping>
+	<mapping universe=0 propertyNum=12 deviceType=1 row=0 col=13>F12</mapping>
+	<mapping universe=0 propertyNum=13 deviceType=1 row=0 col=14>ins</mapping>
+	<mapping universe=0 propertyNum=14 deviceType=1 row=0 col=16>del</mapping>
+	<mapping universe=0 propertyNum=15 deviceType=1 row=1 col=1 >`</mapping>
+	<mapping universe=0 propertyNum=16 deviceType=1 row=1 col=2 >1</mapping>
+	<mapping universe=0 propertyNum=17 deviceType=1 row=1 col=3 >2</mapping>
+	<mapping universe=0 propertyNum=18 deviceType=1 row=1 col=4 >3</mapping>
+	<mapping universe=0 propertyNum=19 deviceType=1 row=1 col=5 >4</mapping>
+	<mapping universe=0 propertyNum=20 deviceType=1 row=1 col=6 >5</mapping>
+	<mapping universe=0 propertyNum=21 deviceType=1 row=1 col=7 >6</mapping>
+	<mapping universe=0 propertyNum=22 deviceType=1 row=1 col=8 >7</mapping>
+	<mapping universe=0 propertyNum=23 deviceType=1 row=1 col=9 >8</mapping>
+	<mapping universe=0 propertyNum=24 deviceType=1 row=1 col=10>9</mapping>
+	<mapping universe=0 propertyNum=25 deviceType=1 row=1 col=11>0</mapping>
+	<mapping universe=0 propertyNum=26 deviceType=1 row=1 col=12>-</mapping>
+	<mapping universe=0 propertyNum=27 deviceType=1 row=1 col=13>=</mapping>
+	<mapping universe=0 propertyNum=28 deviceType=1 row=1 col=15>bkspc</mapping>
+	<mapping universe=0 propertyNum=29 deviceType=1 row=2 col=1 >tab</mapping>
+	<mapping universe=0 propertyNum=30 deviceType=1 row=2 col=2 >q</mapping>
+	<mapping universe=0 propertyNum=31 deviceType=1 row=2 col=3 >w</mapping>
+	<mapping universe=0 propertyNum=32 deviceType=1 row=2 col=4 >e</mapping>
+	<mapping universe=0 propertyNum=33 deviceType=1 row=2 col=5 >r</mapping>
+	<mapping universe=0 propertyNum=34 deviceType=1 row=2 col=6 >t</mapping>
+	<mapping universe=0 propertyNum=35 deviceType=1 row=2 col=7 >y</mapping>
+	<mapping universe=0 propertyNum=36 deviceType=1 row=2 col=8 >u</mapping>
+	<mapping universe=0 propertyNum=37 deviceType=1 row=2 col=9 >i</mapping>
+	<mapping universe=0 propertyNum=38 deviceType=1 row=2 col=10>o</mapping>
+	<mapping universe=0 propertyNum=39 deviceType=1 row=2 col=11>p</mapping>
+	<mapping universe=0 propertyNum=40 deviceType=1 row=2 col=12>[</mapping>
+	<mapping universe=0 propertyNum=41 deviceType=1 row=2 col=13>]</mapping>
+	<mapping universe=0 propertyNum=42 deviceType=1 row=2 col=15>backslash</mapping>
+	<mapping universe=0 propertyNum=43 deviceType=1 row=3 col=1 >caps</mapping>
+	<mapping universe=0 propertyNum=44 deviceType=1 row=3 col=2 >a</mapping>
+	<mapping universe=0 propertyNum=45 deviceType=1 row=3 col=3 >s</mapping>
+	<mapping universe=0 propertyNum=46 deviceType=1 row=3 col=4 >d</mapping>
+	<mapping universe=0 propertyNum=47 deviceType=1 row=3 col=5 >f</mapping>
+	<mapping universe=0 propertyNum=48 deviceType=1 row=3 col=6 >g</mapping>
+	<mapping universe=0 propertyNum=49 deviceType=1 row=3 col=7 >h</mapping>
+	<mapping universe=0 propertyNum=50 deviceType=1 row=3 col=8 >j</mapping>
+	<mapping universe=0 propertyNum=51 deviceType=1 row=3 col=9 >k</mapping>
+	<mapping universe=0 propertyNum=52 deviceType=1 row=3 col=10>l</mapping>
+	<mapping universe=0 propertyNum=53 deviceType=1 row=3 col=11> </mapping>
+	<mapping universe=0 propertyNum=54 deviceType=1 row=3 col=12>'</mapping>
+	<mapping universe=0 propertyNum=55 deviceType=1 row=3 col=15>enter</mapping>
+	<mapping universe=0 propertyNum=56 deviceType=1 row=4 col=1 >lshift</mapping>
+	<mapping universe=0 propertyNum=57 deviceType=1 row=4 col=2 >z</mapping>
+	<mapping universe=0 propertyNum=58 deviceType=1 row=4 col=3 >x</mapping>
+	<mapping universe=0 propertyNum=59 deviceType=1 row=4 col=4 >c</mapping>
+	<mapping universe=0 propertyNum=60 deviceType=1 row=4 col=5 >v</mapping>
+	<mapping universe=0 propertyNum=61 deviceType=1 row=4 col=6 >b</mapping>
+	<mapping universe=0 propertyNum=62 deviceType=1 row=4 col=7 >n</mapping>
+	<mapping universe=0 propertyNum=63 deviceType=1 row=4 col=8 >m</mapping>
+	<mapping universe=0 propertyNum=64 deviceType=1 row=4 col=9 >,</mapping>
+	<mapping universe=0 propertyNum=65 deviceType=1 row=4 col=10>.</mapping>
+	<mapping universe=0 propertyNum=66 deviceType=1 row=4 col=11>slash</mapping>
+	<mapping universe=0 propertyNum=67 deviceType=1 row=4 col=12>up</mapping>
+	<mapping universe=0 propertyNum=68 deviceType=1 row=4 col=15>rshift</mapping>
+	<mapping universe=0 propertyNum=69 deviceType=1 row=5 col=1 >lctrl</mapping>
+	<mapping universe=0 propertyNum=70 deviceType=1 row=5 col=2 >lfn</mapping>
+	<mapping universe=0 propertyNum=71 deviceType=1 row=5 col=4 >win</mapping>
+	<mapping universe=0 propertyNum=72 deviceType=1 row=5 col=5 >lalt</mapping>
+	<mapping universe=0 propertyNum=73 deviceType=1 row=5 col=10>ralt</mapping>
+	<mapping universe=0 propertyNum=74 deviceType=1 row=5 col=12>rctrl</mapping>
+	<mapping universe=0 propertyNum=75 deviceType=1 row=5 col=13>left</mapping>
+	<mapping universe=0 propertyNum=76 deviceType=1 row=5 col=14>down</mapping>
+	<mapping universe=0 propertyNum=77 deviceType=1 row=5 col=15>right</mapping>
+	<mapping universe=0 propertyNum=78 deviceType=1 row=5 col=16>rfn</mapping>
+	<mapping universe=0 propertyNum=79 deviceType=2 count=0>upperright</mapping>
+	<mapping universe=0 propertyNum=80 deviceType=2 count=1 >oclock11</mapping>
+	<mapping universe=0 propertyNum=81 deviceType=2 count=2 >middleright</mapping>
+	<mapping universe=0 propertyNum=82 deviceType=2 count=3 >oclock8</mapping>
+	<mapping universe=0 propertyNum=83 deviceType=2 count=4 >lowerright</mapping>
+	<mapping universe=0 propertyNum=84 deviceType=2 count=5 >oclock7</mapping>
+	<mapping universe=0 propertyNum=85 deviceType=2 count=6 >oclock630</mapping>
+	<mapping universe=0 propertyNum=86 deviceType=2 count=8 >oclock530</mapping>
+	<mapping universe=0 propertyNum=87 deviceType=2 count=9 >oclock5</mapping>
+	<mapping universe=0 propertyNum=88 deviceType=2 count=10>lowerleft</mapping>
+	<mapping universe=0 propertyNum=89 deviceType=2 count=11>oclock4</mapping>
+	<mapping universe=0 propertyNum=90 deviceType=2 count=12>middleleft</mapping>
+	<mapping universe=0 propertyNum=91 deviceType=2 count=13>oclock1</mapping>
+	<mapping universe=0 propertyNum=92 deviceType=2 count=14>upperleft</mapping>
+	<mapping universe=0 propertyNum=93 deviceType=3 count=1 >scrollwheel</mapping>
+	<mapping universe=0 propertyNum=94 deviceType=3 count=2 >logo</mapping>
+</map>
