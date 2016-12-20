@@ -69,6 +69,7 @@ BOOL Chroma::mapPixels() {
 		while (element) {
 			//
 			UINT universe = atoi(element->Attribute("universe"));
+			universeSet.insert(universe);
 			UINT propnum = atoi(element->Attribute("propertyNum"));
 
 			mapping_t localElement;
@@ -171,6 +172,7 @@ case 5:	if (createKeypadEffect)   createKeypadEffect(ChromaSDK::Keypad::CHROMA_N
 */
 
 BOOL Chroma::print(e131_packet_t* packet) {
+/*
 	printf("Root(");
 	printf("prs:%04X", packet->preamble_size);
 	printf(" pos:%04X", packet->postamble_size);
@@ -183,7 +185,8 @@ BOOL Chroma::print(e131_packet_t* packet) {
 	for (int i = 0; i<16; i++)
 	printf("%02hhX", packet->cid[i]);
 	printf(")");
-
+*/
+/*
 	printf("Frame(");
 	printf("ffl:%04X", packet->frame_flength);
 	printf(" fv:%08X", packet->frame_vector);
@@ -194,7 +197,8 @@ BOOL Chroma::print(e131_packet_t* packet) {
 	printf(" o:%02X", packet->options);
 	printf(" u:%04X", packet->universe);
 	printf(")");
-
+*/
+/*
 	printf("DMPLayer(");
 	printf("dfl:%04X", packet->dmp_flength);
 	printf(" dv:%02X", packet->dmp_vector);
@@ -206,38 +210,40 @@ BOOL Chroma::print(e131_packet_t* packet) {
 	for (int i = 0; i<32; i++) //print first 32
 		printf("%02hhX", packet->property_values[i]);
 	printf(")");
-
+*/
+	printf(" sn:%02X", packet->sequence_number);
+	printf(" u:%04X", packet->universe);
+	printf(" sn:%s", packet->source_name);
+	printf(" pvc:%04X", packet->property_value_count);
+	printf(" pv:");
+	for (int i = 0; i<32; i++) //print first 32
+		printf("%02hhX", packet->property_values[i]);
 	return TRUE;
 }
 
 BOOL Chroma::command(e131_packet_t* packet) {
-	//print(packet);
-	UINT universe = ((packet->universe >> 8) - 1);
-
-	int i = -1;
-	for (int j = 1; j<3 * 1024; j += 3) {
-		i++;
-		pair<UINT, UINT> key = make_pair(universe, i);
-		if (propertyNumMap.count(key) > 0) {
-			propertySet_t propertySet = propertyNumMap.at(key);
+	if (bDebug)
+		print(packet);
+	UINT universe = (packet->universe & 0xff) * 0xFF + (packet->universe >> 8);
+	UINT property_value_count = (packet->property_value_count & 0xff) * 0xFF + (packet->property_value_count >> 8);
+	for (const auto& entry : propertyNumMap) {
+		if ((universe == entry.first.first) && (property_value_count>3 * (entry.first.second+1))) {
+			propertySet_t propertySet = entry.second;
 			for (mapping_t node : propertySet) {
+				COLORREF rgb = RGB(packet->property_values[1 + 3 * entry.first.second]
+									, packet->property_values[2 + 3 * entry.first.second]
+									, packet->property_values[3 + 3 * entry.first.second]);
 				switch (node.deviceType) {
-				case 0: break;
-				case 1:
-					keyboard_effect.Color[node.row][node.col] = RGB(packet->property_values[j], packet->property_values[j + 1], packet->property_values[j + 2]);
-					break;
-				case 2:
-					mousemat_effect.Color[node.count] = RGB(packet->property_values[j], packet->property_values[j + 1], packet->property_values[j + 2]);
-					break;
-				case 3:
-					mouse_effect.Color[node.count] = RGB(packet->property_values[j], packet->property_values[j + 1], packet->property_values[j + 2]);
-					break;
-				case 4:
-					headset_effect.Color[node.count] = RGB(packet->property_values[j], packet->property_values[j + 1], packet->property_values[j + 2]);
-					break;
-				case 5:
-					keypad_effect.Color[node.row][node.col] = RGB(packet->property_values[j], packet->property_values[j + 1], packet->property_values[j + 2]);
-					break;
+					case 0: break;
+					case 1: keyboard_effect.Color[node.row][node.col] = rgb;
+						printf(" key %d %d", property_value_count, 3 * entry.first.second);
+						break;
+					case 2: mousemat_effect.Color[node.count] = rgb;
+						printf(" key %d %d", property_value_count, 3 * entry.first.second);
+						break;
+					case 3: mouse_effect.Color[node.count] = rgb;				break;
+					case 4: headset_effect.Color[node.count] = rgb;				break;
+					case 5: keypad_effect.Color[node.row][node.col] = rgb;		break;
 				}
 			}
 		}

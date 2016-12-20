@@ -11,6 +11,7 @@
 #include <wtypes.h>
 #include <map>
 #include <vector>
+#include <set>
 
 #include "RzChromaSDKDefines.h"
 #include "RzChromaSDKTypes.h"
@@ -76,3 +77,4 @@ typedef union {
 	};
 	uint8_t raw[638];
 } e131_packet_t);
+extern BOOL bDebug;

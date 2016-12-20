@@ -28,6 +28,7 @@ public:
 	BOOL print(e131_packet_t* packet);
 
 	//BOOL isDeviceConnected(RZDEVICEID DeviceId);
+	std::set<UINT> universeSet;
 
 private:
 	HMODULE m_ChromaSDKModule;
@@ -50,3 +51,4 @@ private:
 };
 
 #endif
+
