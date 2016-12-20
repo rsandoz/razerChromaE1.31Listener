@@ -235,12 +235,8 @@ BOOL Chroma::command(e131_packet_t* packet) {
 									, packet->property_values[3 + 3 * entry.first.second]);
 				switch (node.deviceType) {
 					case 0: break;
-					case 1: keyboard_effect.Color[node.row][node.col] = rgb;
-						printf(" key %d %d", property_value_count, 3 * entry.first.second);
-						break;
-					case 2: mousemat_effect.Color[node.count] = rgb;
-						printf(" key %d %d", property_value_count, 3 * entry.first.second);
-						break;
+					case 1: keyboard_effect.Color[node.row][node.col] = rgb;	break;
+					case 2: mousemat_effect.Color[node.count] = rgb;			break;
 					case 3: mouse_effect.Color[node.count] = rgb;				break;
 					case 4: headset_effect.Color[node.count] = rgb;				break;
 					case 5: keypad_effect.Color[node.row][node.col] = rgb;		break;
