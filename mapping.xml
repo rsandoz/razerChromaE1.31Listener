@@ -1,98 +1,288 @@
 <?xml version="1.0"?>
 <map>
-	<mapping universe=1 propertyNum=0  deviceType=1 row=0 col=1 >esc</mapping>
-	<mapping universe=1 propertyNum=1  deviceType=1 row=0 col=2 >F1</mapping>
-	<mapping universe=1 propertyNum=2  deviceType=1 row=0 col=3 >F2</mapping>
-	<mapping universe=1 propertyNum=3  deviceType=1 row=0 col=4 >F3</mapping>
-	<mapping universe=1 propertyNum=4  deviceType=1 row=0 col=5 >F4</mapping>
-	<mapping universe=1 propertyNum=5  deviceType=1 row=0 col=6 >F5</mapping>
-	<mapping universe=1 propertyNum=6  deviceType=1 row=0 col=7 >F6</mapping>
-	<mapping universe=1 propertyNum=7  deviceType=1 row=0 col=8 >F7</mapping>
-	<mapping universe=1 propertyNum=8  deviceType=1 row=0 col=9 >F8</mapping>
-	<mapping universe=1 propertyNum=9  deviceType=1 row=0 col=10>F9</mapping>
-	<mapping universe=1 propertyNum=10 deviceType=1 row=0 col=11>F10</mapping>
-	<mapping universe=1 propertyNum=11 deviceType=1 row=0 col=12>F11</mapping>
-	<mapping universe=1 propertyNum=12 deviceType=1 row=0 col=13>F12</mapping>
-	<mapping universe=1 propertyNum=13 deviceType=1 row=0 col=14>ins</mapping>
-	<mapping universe=1 propertyNum=14 deviceType=1 row=0 col=16>del</mapping>
-	<mapping universe=1 propertyNum=15 deviceType=1 row=1 col=1 >`</mapping>
-	<mapping universe=1 propertyNum=16 deviceType=1 row=1 col=2 >1</mapping>
-	<mapping universe=1 propertyNum=17 deviceType=1 row=1 col=3 >2</mapping>
-	<mapping universe=1 propertyNum=18 deviceType=1 row=1 col=4 >3</mapping>
-	<mapping universe=1 propertyNum=19 deviceType=1 row=1 col=5 >4</mapping>
-	<mapping universe=1 propertyNum=20 deviceType=1 row=1 col=6 >5</mapping>
-	<mapping universe=1 propertyNum=21 deviceType=1 row=1 col=7 >6</mapping>
-	<mapping universe=1 propertyNum=22 deviceType=1 row=1 col=8 >7</mapping>
-	<mapping universe=1 propertyNum=23 deviceType=1 row=1 col=9 >8</mapping>
-	<mapping universe=1 propertyNum=24 deviceType=1 row=1 col=10>9</mapping>
-	<mapping universe=1 propertyNum=25 deviceType=1 row=1 col=11>0</mapping>
-	<mapping universe=1 propertyNum=26 deviceType=1 row=1 col=12>-</mapping>
-	<mapping universe=1 propertyNum=27 deviceType=1 row=1 col=13>=</mapping>
-	<mapping universe=1 propertyNum=28 deviceType=1 row=1 col=15>bkspc</mapping>
-	<mapping universe=1 propertyNum=29 deviceType=1 row=2 col=1 >tab</mapping>
-	<mapping universe=1 propertyNum=30 deviceType=1 row=2 col=2 >q</mapping>
-	<mapping universe=1 propertyNum=31 deviceType=1 row=2 col=3 >w</mapping>
-	<mapping universe=1 propertyNum=32 deviceType=1 row=2 col=4 >e</mapping>
-	<mapping universe=1 propertyNum=33 deviceType=1 row=2 col=5 >r</mapping>
-	<mapping universe=1 propertyNum=34 deviceType=1 row=2 col=6 >t</mapping>
-	<mapping universe=1 propertyNum=35 deviceType=1 row=2 col=7 >y</mapping>
-	<mapping universe=1 propertyNum=36 deviceType=1 row=2 col=8 >u</mapping>
-	<mapping universe=1 propertyNum=37 deviceType=1 row=2 col=9 >i</mapping>
-	<mapping universe=1 propertyNum=38 deviceType=1 row=2 col=10>o</mapping>
-	<mapping universe=1 propertyNum=39 deviceType=1 row=2 col=11>p</mapping>
-	<mapping universe=1 propertyNum=40 deviceType=1 row=2 col=12>[</mapping>
-	<mapping universe=1 propertyNum=41 deviceType=1 row=2 col=13>]</mapping>
-	<mapping universe=1 propertyNum=42 deviceType=1 row=2 col=15>backslash</mapping>
-	<mapping universe=1 propertyNum=43 deviceType=1 row=3 col=1 >caps</mapping>
-	<mapping universe=1 propertyNum=44 deviceType=1 row=3 col=2 >a</mapping>
-	<mapping universe=1 propertyNum=45 deviceType=1 row=3 col=3 >s</mapping>
-	<mapping universe=1 propertyNum=46 deviceType=1 row=3 col=4 >d</mapping>
-	<mapping universe=1 propertyNum=47 deviceType=1 row=3 col=5 >f</mapping>
-	<mapping universe=1 propertyNum=48 deviceType=1 row=3 col=6 >g</mapping>
-	<mapping universe=1 propertyNum=49 deviceType=1 row=3 col=7 >h</mapping>
-	<mapping universe=1 propertyNum=50 deviceType=1 row=3 col=8 >j</mapping>
-	<mapping universe=1 propertyNum=51 deviceType=1 row=3 col=9 >k</mapping>
-	<mapping universe=1 propertyNum=52 deviceType=1 row=3 col=10>l</mapping>
-	<mapping universe=1 propertyNum=53 deviceType=1 row=3 col=11> </mapping>
-	<mapping universe=1 propertyNum=54 deviceType=1 row=3 col=12>'</mapping>
-	<mapping universe=1 propertyNum=55 deviceType=1 row=3 col=15>enter</mapping>
-	<mapping universe=1 propertyNum=56 deviceType=1 row=4 col=1 >lshift</mapping>
-	<mapping universe=1 propertyNum=57 deviceType=1 row=4 col=2 >z</mapping>
-	<mapping universe=1 propertyNum=58 deviceType=1 row=4 col=3 >x</mapping>
-	<mapping universe=1 propertyNum=59 deviceType=1 row=4 col=4 >c</mapping>
-	<mapping universe=1 propertyNum=60 deviceType=1 row=4 col=5 >v</mapping>
-	<mapping universe=1 propertyNum=61 deviceType=1 row=4 col=6 >b</mapping>
-	<mapping universe=1 propertyNum=62 deviceType=1 row=4 col=7 >n</mapping>
-	<mapping universe=1 propertyNum=63 deviceType=1 row=4 col=8 >m</mapping>
-	<mapping universe=1 propertyNum=64 deviceType=1 row=4 col=9 >,</mapping>
-	<mapping universe=1 propertyNum=65 deviceType=1 row=4 col=10>.</mapping>
-	<mapping universe=1 propertyNum=66 deviceType=1 row=4 col=11>slash</mapping>
-	<mapping universe=1 propertyNum=67 deviceType=1 row=4 col=12>up</mapping>
-	<mapping universe=1 propertyNum=68 deviceType=1 row=4 col=15>rshift</mapping>
-	<mapping universe=1 propertyNum=69 deviceType=1 row=5 col=1 >lctrl</mapping>
-	<mapping universe=1 propertyNum=70 deviceType=1 row=5 col=2 >lfn</mapping>
-	<mapping universe=1 propertyNum=71 deviceType=1 row=5 col=4 >win</mapping>
-	<mapping universe=1 propertyNum=72 deviceType=1 row=5 col=5 >lalt</mapping>
-	<mapping universe=1 propertyNum=73 deviceType=1 row=5 col=10>ralt</mapping>
-	<mapping universe=1 propertyNum=74 deviceType=1 row=5 col=12>rctrl</mapping>
-	<mapping universe=1 propertyNum=75 deviceType=1 row=5 col=13>left</mapping>
-	<mapping universe=1 propertyNum=76 deviceType=1 row=5 col=14>down</mapping>
-	<mapping universe=1 propertyNum=77 deviceType=1 row=5 col=15>right</mapping>
-	<mapping universe=1 propertyNum=78 deviceType=1 row=5 col=16>rfn</mapping>
-	<mapping universe=1 propertyNum=79 deviceType=2 count=0>upperright</mapping>
-	<mapping universe=1 propertyNum=80 deviceType=2 count=1 >oclock11</mapping>
-	<mapping universe=1 propertyNum=81 deviceType=2 count=2 >middleright</mapping>
-	<mapping universe=1 propertyNum=82 deviceType=2 count=3 >oclock8</mapping>
-	<mapping universe=1 propertyNum=83 deviceType=2 count=4 >lowerright</mapping>
-	<mapping universe=1 propertyNum=84 deviceType=2 count=5 >oclock7</mapping>
-	<mapping universe=1 propertyNum=85 deviceType=2 count=6 >oclock630</mapping>
-	<mapping universe=1 propertyNum=86 deviceType=2 count=8 >oclock530</mapping>
-	<mapping universe=1 propertyNum=87 deviceType=2 count=9 >oclock5</mapping>
-	<mapping universe=1 propertyNum=88 deviceType=2 count=10>lowerleft</mapping>
-	<mapping universe=1 propertyNum=89 deviceType=2 count=11>oclock4</mapping>
-	<mapping universe=1 propertyNum=90 deviceType=2 count=12>middleleft</mapping>
-	<mapping universe=1 propertyNum=91 deviceType=2 count=13>oclock1</mapping>
-	<mapping universe=1 propertyNum=92 deviceType=2 count=14>upperleft</mapping>
-	<mapping universe=1 propertyNum=93 deviceType=3 count=1 >scrollwheel</mapping>
-	<mapping universe=1 propertyNum=94 deviceType=3 count=2 >logo</mapping>
+	<mapping color=0 universe=1 propertyNum=0   deviceType=1 row=0 col=1 >red_esc</mapping>
+	<mapping color=1 universe=1 propertyNum=1   deviceType=1 row=0 col=1 >green_esc</mapping>
+	<mapping color=2 universe=1 propertyNum=2   deviceType=1 row=0 col=1 >blue_esc</mapping>
+	<mapping color=0 universe=1 propertyNum=3   deviceType=1 row=0 col=2 >red_F1</mapping>
+	<mapping color=1 universe=1 propertyNum=4   deviceType=1 row=0 col=2 >green_F1</mapping>
+	<mapping color=2 universe=1 propertyNum=5   deviceType=1 row=0 col=2 >blue_F1</mapping>
+	<mapping color=0 universe=1 propertyNum=6   deviceType=1 row=0 col=3 >red_F2</mapping>
+	<mapping color=1 universe=1 propertyNum=7   deviceType=1 row=0 col=3 >green_F2</mapping>
+	<mapping color=2 universe=1 propertyNum=8   deviceType=1 row=0 col=3 >blue_F2</mapping>
+	<mapping color=0 universe=1 propertyNum=9   deviceType=1 row=0 col=4 >red_F3</mapping>
+	<mapping color=1 universe=1 propertyNum=10  deviceType=1 row=0 col=4 >green_F3</mapping>
+	<mapping color=2 universe=1 propertyNum=11  deviceType=1 row=0 col=4 >blue_F3</mapping>
+	<mapping color=0 universe=1 propertyNum=12  deviceType=1 row=0 col=5 >red_F4</mapping>
+	<mapping color=1 universe=1 propertyNum=13  deviceType=1 row=0 col=5 >green_F4</mapping>
+	<mapping color=2 universe=1 propertyNum=14  deviceType=1 row=0 col=5 >blue_F4</mapping>
+	<mapping color=0 universe=1 propertyNum=15  deviceType=1 row=0 col=6 >red_F5</mapping>
+	<mapping color=1 universe=1 propertyNum=16  deviceType=1 row=0 col=6 >green_F5</mapping>
+	<mapping color=2 universe=1 propertyNum=17  deviceType=1 row=0 col=6 >blue_F5</mapping>
+	<mapping color=0 universe=1 propertyNum=18  deviceType=1 row=0 col=7 >red_F6</mapping>
+	<mapping color=1 universe=1 propertyNum=19  deviceType=1 row=0 col=7 >green_F6</mapping>
+	<mapping color=2 universe=1 propertyNum=20  deviceType=1 row=0 col=7 >blue_F6</mapping>
+	<mapping color=0 universe=1 propertyNum=21  deviceType=1 row=0 col=8 >red_F7</mapping>
+	<mapping color=1 universe=1 propertyNum=22  deviceType=1 row=0 col=8 >green_F7</mapping>
+	<mapping color=2 universe=1 propertyNum=23  deviceType=1 row=0 col=8 >blue_F7</mapping>
+	<mapping color=0 universe=1 propertyNum=24  deviceType=1 row=0 col=9 >red_F8</mapping>
+	<mapping color=1 universe=1 propertyNum=25  deviceType=1 row=0 col=9 >green_F8</mapping>
+	<mapping color=2 universe=1 propertyNum=26  deviceType=1 row=0 col=9 >blue_F8</mapping>
+	<mapping color=0 universe=1 propertyNum=27  deviceType=1 row=0 col=10>red_F9</mapping>
+	<mapping color=1 universe=1 propertyNum=28  deviceType=1 row=0 col=10>green_F9</mapping>
+	<mapping color=2 universe=1 propertyNum=29  deviceType=1 row=0 col=10>blue_F9</mapping>
+	<mapping color=0 universe=1 propertyNum=30  deviceType=1 row=0 col=11>red_F10</mapping>
+	<mapping color=1 universe=1 propertyNum=31  deviceType=1 row=0 col=11>green_F10</mapping>
+	<mapping color=2 universe=1 propertyNum=32  deviceType=1 row=0 col=11>blue_F10</mapping>
+	<mapping color=0 universe=1 propertyNum=33  deviceType=1 row=0 col=12>red_F11</mapping>
+	<mapping color=1 universe=1 propertyNum=34  deviceType=1 row=0 col=12>green_F11</mapping>
+	<mapping color=2 universe=1 propertyNum=35  deviceType=1 row=0 col=12>blue_F11</mapping>
+	<mapping color=0 universe=1 propertyNum=36  deviceType=1 row=0 col=13>red_F12</mapping>
+	<mapping color=1 universe=1 propertyNum=37  deviceType=1 row=0 col=13>green_F12</mapping>
+	<mapping color=2 universe=1 propertyNum=38  deviceType=1 row=0 col=13>blue_F12</mapping>
+	<mapping color=0 universe=1 propertyNum=39  deviceType=1 row=0 col=14>red_ins</mapping>
+	<mapping color=1 universe=1 propertyNum=40  deviceType=1 row=0 col=14>green_ins</mapping>
+	<mapping color=2 universe=1 propertyNum=41  deviceType=1 row=0 col=14>blue_ins</mapping>
+	<mapping color=0 universe=1 propertyNum=42  deviceType=1 row=0 col=16>red_del</mapping>
+	<mapping color=1 universe=1 propertyNum=43  deviceType=1 row=0 col=16>green_del</mapping>
+	<mapping color=2 universe=1 propertyNum=44  deviceType=1 row=0 col=16>blue_del</mapping>
+	<mapping color=0 universe=1 propertyNum=45  deviceType=1 row=1 col=1 >red_`</mapping>
+	<mapping color=1 universe=1 propertyNum=46  deviceType=1 row=1 col=1 >green_`</mapping>
+	<mapping color=2 universe=1 propertyNum=47  deviceType=1 row=1 col=1 >blue_`</mapping>
+	<mapping color=0 universe=1 propertyNum=48  deviceType=1 row=1 col=2 >red_1</mapping>
+	<mapping color=1 universe=1 propertyNum=49  deviceType=1 row=1 col=2 >green_1</mapping>
+	<mapping color=2 universe=1 propertyNum=50  deviceType=1 row=1 col=2 >blue_1</mapping>
+	<mapping color=0 universe=1 propertyNum=51  deviceType=1 row=1 col=3 >red_2</mapping>
+	<mapping color=1 universe=1 propertyNum=52  deviceType=1 row=1 col=3 >green_2</mapping>
+	<mapping color=2 universe=1 propertyNum=53  deviceType=1 row=1 col=3 >blue_2</mapping>
+	<mapping color=0 universe=1 propertyNum=54  deviceType=1 row=1 col=4 >red_3</mapping>
+	<mapping color=1 universe=1 propertyNum=55  deviceType=1 row=1 col=4 >green_3</mapping>
+	<mapping color=2 universe=1 propertyNum=56  deviceType=1 row=1 col=4 >blue_3</mapping>
+	<mapping color=0 universe=1 propertyNum=57  deviceType=1 row=1 col=5 >red_4</mapping>
+	<mapping color=1 universe=1 propertyNum=58  deviceType=1 row=1 col=5 >green_4</mapping>
+	<mapping color=2 universe=1 propertyNum=59  deviceType=1 row=1 col=5 >blue_4</mapping>
+	<mapping color=0 universe=1 propertyNum=60  deviceType=1 row=1 col=6 >red_5</mapping>
+	<mapping color=1 universe=1 propertyNum=61  deviceType=1 row=1 col=6 >green_5</mapping>
+	<mapping color=2 universe=1 propertyNum=62  deviceType=1 row=1 col=6 >blue_5</mapping>
+	<mapping color=0 universe=1 propertyNum=63  deviceType=1 row=1 col=7 >red_6</mapping>
+	<mapping color=1 universe=1 propertyNum=64  deviceType=1 row=1 col=7 >green_6</mapping>
+	<mapping color=2 universe=1 propertyNum=65  deviceType=1 row=1 col=7 >blue_6</mapping>
+	<mapping color=0 universe=1 propertyNum=66  deviceType=1 row=1 col=8 >red_7</mapping>
+	<mapping color=1 universe=1 propertyNum=67  deviceType=1 row=1 col=8 >green_7</mapping>
+	<mapping color=2 universe=1 propertyNum=68  deviceType=1 row=1 col=8 >blue_7</mapping>
+	<mapping color=0 universe=1 propertyNum=69  deviceType=1 row=1 col=9 >red_8</mapping>
+	<mapping color=1 universe=1 propertyNum=70  deviceType=1 row=1 col=9 >green_8</mapping>
+	<mapping color=2 universe=1 propertyNum=71  deviceType=1 row=1 col=9 >blue_8</mapping>
+	<mapping color=0 universe=1 propertyNum=72  deviceType=1 row=1 col=10>red_9</mapping>
+	<mapping color=1 universe=1 propertyNum=73  deviceType=1 row=1 col=10>green_9</mapping>
+	<mapping color=2 universe=1 propertyNum=74  deviceType=1 row=1 col=10>blue_9</mapping>
+	<mapping color=0 universe=1 propertyNum=75  deviceType=1 row=1 col=11>red_0</mapping>
+	<mapping color=1 universe=1 propertyNum=76  deviceType=1 row=1 col=11>green_0</mapping>
+	<mapping color=2 universe=1 propertyNum=77  deviceType=1 row=1 col=11>blue_0</mapping>
+	<mapping color=0 universe=1 propertyNum=78  deviceType=1 row=1 col=12>red_-</mapping>
+	<mapping color=1 universe=1 propertyNum=79  deviceType=1 row=1 col=12>green_-</mapping>
+	<mapping color=2 universe=1 propertyNum=80  deviceType=1 row=1 col=12>blue_-</mapping>
+	<mapping color=0 universe=1 propertyNum=81  deviceType=1 row=1 col=13>red_=</mapping>
+	<mapping color=1 universe=1 propertyNum=82  deviceType=1 row=1 col=13>green_=</mapping>
+	<mapping color=2 universe=1 propertyNum=83  deviceType=1 row=1 col=13>blue_=</mapping>
+	<mapping color=0 universe=1 propertyNum=84  deviceType=1 row=1 col=15>red_bkspc</mapping>
+	<mapping color=1 universe=1 propertyNum=85  deviceType=1 row=1 col=15>green_bkspc</mapping>
+	<mapping color=2 universe=1 propertyNum=86  deviceType=1 row=1 col=15>blue_bkspc</mapping>
+	<mapping color=0 universe=1 propertyNum=87  deviceType=1 row=2 col=1 >red_tab</mapping>
+	<mapping color=1 universe=1 propertyNum=88  deviceType=1 row=2 col=1 >green_tab</mapping>
+	<mapping color=2 universe=1 propertyNum=89  deviceType=1 row=2 col=1 >blue_tab</mapping>
+	<mapping color=0 universe=1 propertyNum=90  deviceType=1 row=2 col=2 >red_q</mapping>
+	<mapping color=1 universe=1 propertyNum=91  deviceType=1 row=2 col=2 >green_q</mapping>
+	<mapping color=2 universe=1 propertyNum=92  deviceType=1 row=2 col=2 >blue_q</mapping>
+	<mapping color=0 universe=1 propertyNum=93  deviceType=1 row=2 col=3 >red_w</mapping>
+	<mapping color=1 universe=1 propertyNum=94  deviceType=1 row=2 col=3 >green_w</mapping>
+	<mapping color=2 universe=1 propertyNum=95  deviceType=1 row=2 col=3 >blue_w</mapping>
+	<mapping color=0 universe=1 propertyNum=96  deviceType=1 row=2 col=4 >red_e</mapping>
+	<mapping color=1 universe=1 propertyNum=97  deviceType=1 row=2 col=4 >green_e</mapping>
+	<mapping color=2 universe=1 propertyNum=98  deviceType=1 row=2 col=4 >blue_e</mapping>
+	<mapping color=0 universe=1 propertyNum=99  deviceType=1 row=2 col=5 >red_r</mapping>
+	<mapping color=1 universe=1 propertyNum=100 deviceType=1 row=2 col=5 >green_r</mapping>
+	<mapping color=2 universe=1 propertyNum=101 deviceType=1 row=2 col=5 >blue_r</mapping>
+	<mapping color=0 universe=1 propertyNum=102 deviceType=1 row=2 col=6 >red_t</mapping>
+	<mapping color=1 universe=1 propertyNum=103 deviceType=1 row=2 col=6 >green_t</mapping>
+	<mapping color=2 universe=1 propertyNum=104 deviceType=1 row=2 col=6 >blue_t</mapping>
+	<mapping color=0 universe=1 propertyNum=105 deviceType=1 row=2 col=7 >red_y</mapping>
+	<mapping color=1 universe=1 propertyNum=106 deviceType=1 row=2 col=7 >green_y</mapping>
+	<mapping color=2 universe=1 propertyNum=107 deviceType=1 row=2 col=7 >blue_y</mapping>
+	<mapping color=0 universe=1 propertyNum=108 deviceType=1 row=2 col=8 >red_u</mapping>
+	<mapping color=1 universe=1 propertyNum=109 deviceType=1 row=2 col=8 >green_u</mapping>
+	<mapping color=2 universe=1 propertyNum=110 deviceType=1 row=2 col=8 >blue_u</mapping>
+	<mapping color=0 universe=1 propertyNum=111 deviceType=1 row=2 col=9 >red_i</mapping>
+	<mapping color=1 universe=1 propertyNum=112 deviceType=1 row=2 col=9 >green_i</mapping>
+	<mapping color=2 universe=1 propertyNum=113 deviceType=1 row=2 col=9 >blue_i</mapping>
+	<mapping color=0 universe=1 propertyNum=114 deviceType=1 row=2 col=10>red_o</mapping>
+	<mapping color=1 universe=1 propertyNum=115 deviceType=1 row=2 col=10>green_o</mapping>
+	<mapping color=2 universe=1 propertyNum=116 deviceType=1 row=2 col=10>blue_o</mapping>
+	<mapping color=0 universe=1 propertyNum=117 deviceType=1 row=2 col=11>red_p</mapping>
+	<mapping color=1 universe=1 propertyNum=118 deviceType=1 row=2 col=11>green_p</mapping>
+	<mapping color=2 universe=1 propertyNum=119 deviceType=1 row=2 col=11>blue_p</mapping>
+	<mapping color=0 universe=1 propertyNum=120 deviceType=1 row=2 col=12>red_[</mapping>
+	<mapping color=1 universe=1 propertyNum=121 deviceType=1 row=2 col=12>green_[</mapping>
+	<mapping color=2 universe=1 propertyNum=122 deviceType=1 row=2 col=12>blue_[</mapping>
+	<mapping color=0 universe=1 propertyNum=123 deviceType=1 row=2 col=13>red_]</mapping>
+	<mapping color=1 universe=1 propertyNum=124 deviceType=1 row=2 col=13>green_]</mapping>
+	<mapping color=2 universe=1 propertyNum=125 deviceType=1 row=2 col=13>blue_]</mapping>
+	<mapping color=0 universe=1 propertyNum=126 deviceType=1 row=2 col=15>red_backslash</mapping>
+	<mapping color=1 universe=1 propertyNum=127 deviceType=1 row=2 col=15>green_backslash</mapping>
+	<mapping color=2 universe=1 propertyNum=128 deviceType=1 row=2 col=15>blue_backslash</mapping>
+	<mapping color=0 universe=1 propertyNum=129 deviceType=1 row=3 col=1 >red_caps</mapping>
+	<mapping color=1 universe=1 propertyNum=130 deviceType=1 row=3 col=1 >green_caps</mapping>
+	<mapping color=2 universe=1 propertyNum=131 deviceType=1 row=3 col=1 >blue_caps</mapping>
+	<mapping color=0 universe=1 propertyNum=132 deviceType=1 row=3 col=2 >red_a</mapping>
+	<mapping color=1 universe=1 propertyNum=133 deviceType=1 row=3 col=2 >green_a</mapping>
+	<mapping color=2 universe=1 propertyNum=134 deviceType=1 row=3 col=2 >blue_a</mapping>
+	<mapping color=0 universe=1 propertyNum=135 deviceType=1 row=3 col=3 >red_s</mapping>
+	<mapping color=1 universe=1 propertyNum=136 deviceType=1 row=3 col=3 >green_s</mapping>
+	<mapping color=2 universe=1 propertyNum=137 deviceType=1 row=3 col=3 >blue_s</mapping>
+	<mapping color=0 universe=1 propertyNum=138 deviceType=1 row=3 col=4 >red_d</mapping>
+	<mapping color=1 universe=1 propertyNum=139 deviceType=1 row=3 col=4 >green_d</mapping>
+	<mapping color=2 universe=1 propertyNum=140 deviceType=1 row=3 col=4 >blue_d</mapping>
+	<mapping color=0 universe=1 propertyNum=141 deviceType=1 row=3 col=5 >red_f</mapping>
+	<mapping color=1 universe=1 propertyNum=142 deviceType=1 row=3 col=5 >green_f</mapping>
+	<mapping color=2 universe=1 propertyNum=143 deviceType=1 row=3 col=5 >blue_f</mapping>
+	<mapping color=0 universe=1 propertyNum=144 deviceType=1 row=3 col=6 >red_g</mapping>
+	<mapping color=1 universe=1 propertyNum=145 deviceType=1 row=3 col=6 >green_g</mapping>
+	<mapping color=2 universe=1 propertyNum=146 deviceType=1 row=3 col=6 >blue_g</mapping>
+	<mapping color=0 universe=1 propertyNum=147 deviceType=1 row=3 col=7 >red_h</mapping>
+	<mapping color=1 universe=1 propertyNum=148 deviceType=1 row=3 col=7 >green_h</mapping>
+	<mapping color=2 universe=1 propertyNum=149 deviceType=1 row=3 col=7 >blue_h</mapping>
+	<mapping color=0 universe=1 propertyNum=150 deviceType=1 row=3 col=8 >red_j</mapping>
+	<mapping color=1 universe=1 propertyNum=151 deviceType=1 row=3 col=8 >green_j</mapping>
+	<mapping color=2 universe=1 propertyNum=152 deviceType=1 row=3 col=8 >blue_j</mapping>
+	<mapping color=0 universe=1 propertyNum=153 deviceType=1 row=3 col=9 >red_k</mapping>
+	<mapping color=1 universe=1 propertyNum=154 deviceType=1 row=3 col=9 >green_k</mapping>
+	<mapping color=2 universe=1 propertyNum=155 deviceType=1 row=3 col=9 >blue_k</mapping>
+	<mapping color=0 universe=1 propertyNum=156 deviceType=1 row=3 col=10>red_l</mapping>
+	<mapping color=1 universe=1 propertyNum=157 deviceType=1 row=3 col=10>green_l</mapping>
+	<mapping color=2 universe=1 propertyNum=158 deviceType=1 row=3 col=10>blue_l</mapping>
+	<mapping color=0 universe=1 propertyNum=159 deviceType=1 row=3 col=11>red_ </mapping>
+	<mapping color=1 universe=1 propertyNum=160 deviceType=1 row=3 col=11>green_ </mapping>
+	<mapping color=2 universe=1 propertyNum=161 deviceType=1 row=3 col=11>blue_ </mapping>
+	<mapping color=0 universe=1 propertyNum=162 deviceType=1 row=3 col=12>red_'</mapping>
+	<mapping color=1 universe=1 propertyNum=163 deviceType=1 row=3 col=12>green_'</mapping>
+	<mapping color=2 universe=1 propertyNum=164 deviceType=1 row=3 col=12>blue_'</mapping>
+	<mapping color=0 universe=1 propertyNum=165 deviceType=1 row=3 col=15>red_enter</mapping>
+	<mapping color=1 universe=1 propertyNum=166 deviceType=1 row=3 col=15>green_enter</mapping>
+	<mapping color=2 universe=1 propertyNum=167 deviceType=1 row=3 col=15>blue_enter</mapping>
+	<mapping color=0 universe=1 propertyNum=168 deviceType=1 row=4 col=1 >red_lshift</mapping>
+	<mapping color=1 universe=1 propertyNum=169 deviceType=1 row=4 col=1 >green_lshift</mapping>
+	<mapping color=2 universe=1 propertyNum=170 deviceType=1 row=4 col=1 >blue_lshift</mapping>
+	<mapping color=0 universe=1 propertyNum=171 deviceType=1 row=4 col=2 >red_z</mapping>
+	<mapping color=1 universe=1 propertyNum=172 deviceType=1 row=4 col=2 >green_z</mapping>
+	<mapping color=2 universe=1 propertyNum=173 deviceType=1 row=4 col=2 >blue_z</mapping>
+	<mapping color=0 universe=1 propertyNum=174 deviceType=1 row=4 col=3 >red_x</mapping>
+	<mapping color=1 universe=1 propertyNum=175 deviceType=1 row=4 col=3 >green_x</mapping>
+	<mapping color=2 universe=1 propertyNum=176 deviceType=1 row=4 col=3 >blue_x</mapping>
+	<mapping color=0 universe=1 propertyNum=177 deviceType=1 row=4 col=4 >red_c</mapping>
+	<mapping color=1 universe=1 propertyNum=178 deviceType=1 row=4 col=4 >green_c</mapping>
+	<mapping color=2 universe=1 propertyNum=179 deviceType=1 row=4 col=4 >blue_c</mapping>
+	<mapping color=0 universe=1 propertyNum=180 deviceType=1 row=4 col=5 >red_v</mapping>
+	<mapping color=1 universe=1 propertyNum=181 deviceType=1 row=4 col=5 >green_v</mapping>
+	<mapping color=2 universe=1 propertyNum=182 deviceType=1 row=4 col=5 >blue_v</mapping>
+	<mapping color=0 universe=1 propertyNum=183 deviceType=1 row=4 col=6 >red_b</mapping>
+	<mapping color=1 universe=1 propertyNum=184 deviceType=1 row=4 col=6 >green_b</mapping>
+	<mapping color=2 universe=1 propertyNum=185 deviceType=1 row=4 col=6 >blue_b</mapping>
+	<mapping color=0 universe=1 propertyNum=186 deviceType=1 row=4 col=7 >red_n</mapping>
+	<mapping color=1 universe=1 propertyNum=187 deviceType=1 row=4 col=7 >green_n</mapping>
+	<mapping color=2 universe=1 propertyNum=188 deviceType=1 row=4 col=7 >blue_n</mapping>
+	<mapping color=0 universe=1 propertyNum=189 deviceType=1 row=4 col=8 >red_m</mapping>
+	<mapping color=1 universe=1 propertyNum=190 deviceType=1 row=4 col=8 >green_m</mapping>
+	<mapping color=2 universe=1 propertyNum=191 deviceType=1 row=4 col=8 >blue_m</mapping>
+	<mapping color=0 universe=1 propertyNum=192 deviceType=1 row=4 col=9 >red_,</mapping>
+	<mapping color=1 universe=1 propertyNum=193 deviceType=1 row=4 col=9 >green_,</mapping>
+	<mapping color=2 universe=1 propertyNum=194 deviceType=1 row=4 col=9 >blue_,</mapping>
+	<mapping color=0 universe=1 propertyNum=195 deviceType=1 row=4 col=10>red_.</mapping>
+	<mapping color=1 universe=1 propertyNum=196 deviceType=1 row=4 col=10>green_.</mapping>
+	<mapping color=2 universe=1 propertyNum=197 deviceType=1 row=4 col=10>blue_.</mapping>
+	<mapping color=0 universe=1 propertyNum=198 deviceType=1 row=4 col=11>red_slash</mapping>
+	<mapping color=1 universe=1 propertyNum=199 deviceType=1 row=4 col=11>green_slash</mapping>
+	<mapping color=2 universe=1 propertyNum=200 deviceType=1 row=4 col=11>blue_slash</mapping>
+	<mapping color=0 universe=1 propertyNum=201 deviceType=1 row=4 col=12>red_up</mapping>
+	<mapping color=1 universe=1 propertyNum=202 deviceType=1 row=4 col=12>green_up</mapping>
+	<mapping color=2 universe=1 propertyNum=203 deviceType=1 row=4 col=12>blue_up</mapping>
+	<mapping color=0 universe=1 propertyNum=204 deviceType=1 row=4 col=15>red_rshift</mapping>
+	<mapping color=1 universe=1 propertyNum=205 deviceType=1 row=4 col=15>green_rshift</mapping>
+	<mapping color=2 universe=1 propertyNum=206 deviceType=1 row=4 col=15>blue_rshift</mapping>
+	<mapping color=0 universe=1 propertyNum=207 deviceType=1 row=5 col=1 >red_lctrl</mapping>
+	<mapping color=1 universe=1 propertyNum=208 deviceType=1 row=5 col=1 >green_lctrl</mapping>
+	<mapping color=2 universe=1 propertyNum=209 deviceType=1 row=5 col=1 >blue_lctrl</mapping>
+	<mapping color=0 universe=1 propertyNum=210 deviceType=1 row=5 col=2 >red_lfn</mapping>
+	<mapping color=1 universe=1 propertyNum=211 deviceType=1 row=5 col=2 >green_lfn</mapping>
+	<mapping color=2 universe=1 propertyNum=212 deviceType=1 row=5 col=2 >blue_lfn</mapping>
+	<mapping color=0 universe=1 propertyNum=213 deviceType=1 row=5 col=4 >red_win</mapping>
+	<mapping color=1 universe=1 propertyNum=214 deviceType=1 row=5 col=4 >green_win</mapping>
+	<mapping color=2 universe=1 propertyNum=215 deviceType=1 row=5 col=4 >blue_win</mapping>
+	<mapping color=0 universe=1 propertyNum=216 deviceType=1 row=5 col=5 >red_lalt</mapping>
+	<mapping color=1 universe=1 propertyNum=217 deviceType=1 row=5 col=5 >green_lalt</mapping>
+	<mapping color=2 universe=1 propertyNum=218 deviceType=1 row=5 col=5 >blue_lalt</mapping>
+	<mapping color=0 universe=1 propertyNum=219 deviceType=1 row=5 col=10>red_ralt</mapping>
+	<mapping color=1 universe=1 propertyNum=220 deviceType=1 row=5 col=10>green_ralt</mapping>
+	<mapping color=2 universe=1 propertyNum=221 deviceType=1 row=5 col=10>blue_ralt</mapping>
+	<mapping color=0 universe=1 propertyNum=222 deviceType=1 row=5 col=12>red_rctrl</mapping>
+	<mapping color=1 universe=1 propertyNum=223 deviceType=1 row=5 col=12>green_rctrl</mapping>
+	<mapping color=2 universe=1 propertyNum=224 deviceType=1 row=5 col=12>blue_rctrl</mapping>
+	<mapping color=0 universe=1 propertyNum=225 deviceType=1 row=5 col=13>red_left</mapping>
+	<mapping color=1 universe=1 propertyNum=226 deviceType=1 row=5 col=13>green_left</mapping>
+	<mapping color=2 universe=1 propertyNum=227 deviceType=1 row=5 col=13>blue_left</mapping>
+	<mapping color=0 universe=1 propertyNum=228 deviceType=1 row=5 col=14>red_down</mapping>
+	<mapping color=1 universe=1 propertyNum=229 deviceType=1 row=5 col=14>green_down</mapping>
+	<mapping color=2 universe=1 propertyNum=230 deviceType=1 row=5 col=14>blue_down</mapping>
+	<mapping color=0 universe=1 propertyNum=231 deviceType=1 row=5 col=15>red_right</mapping>
+	<mapping color=1 universe=1 propertyNum=232 deviceType=1 row=5 col=15>green_right</mapping>
+	<mapping color=2 universe=1 propertyNum=233 deviceType=1 row=5 col=15>blue_right</mapping>
+	<mapping color=0 universe=1 propertyNum=234 deviceType=1 row=5 col=16>red_rfn</mapping>
+	<mapping color=1 universe=1 propertyNum=235 deviceType=1 row=5 col=16>green_rfn</mapping>
+	<mapping color=2 universe=1 propertyNum=236 deviceType=1 row=5 col=16>blue_rfn</mapping>
+	<mapping color=0 universe=1 propertyNum=237 deviceType=2 count=0     >red_upperright</mapping>
+	<mapping color=1 universe=1 propertyNum=238 deviceType=2 count=0     >green_upperright</mapping>
+	<mapping color=2 universe=1 propertyNum=239 deviceType=2 count=0     >blue_upperright</mapping>
+	<mapping color=0 universe=1 propertyNum=240 deviceType=2 count=1     >red_oclock11</mapping>
+	<mapping color=1 universe=1 propertyNum=241 deviceType=2 count=1     >green_oclock11</mapping>
+	<mapping color=2 universe=1 propertyNum=242 deviceType=2 count=1     >blue_oclock11</mapping>
+	<mapping color=0 universe=1 propertyNum=243 deviceType=2 count=2     >red_middleright</mapping>
+	<mapping color=1 universe=1 propertyNum=244 deviceType=2 count=2     >green_middleright</mapping>
+	<mapping color=2 universe=1 propertyNum=245 deviceType=2 count=2     >blue_middleright</mapping>
+	<mapping color=0 universe=1 propertyNum=246 deviceType=2 count=3     >red_oclock8</mapping>
+	<mapping color=1 universe=1 propertyNum=247 deviceType=2 count=3     >green_oclock8</mapping>
+	<mapping color=2 universe=1 propertyNum=248 deviceType=2 count=3     >blue_oclock8</mapping>
+	<mapping color=0 universe=1 propertyNum=249 deviceType=2 count=4     >red_lowerright</mapping>
+	<mapping color=1 universe=1 propertyNum=250 deviceType=2 count=4     >green_lowerright</mapping>
+	<mapping color=2 universe=1 propertyNum=251 deviceType=2 count=4     >blue_lowerright</mapping>
+	<mapping color=0 universe=1 propertyNum=252 deviceType=2 count=5     >red_oclock7</mapping>
+	<mapping color=1 universe=1 propertyNum=253 deviceType=2 count=5     >green_oclock7</mapping>
+	<mapping color=2 universe=1 propertyNum=254 deviceType=2 count=5     >blue_oclock7</mapping>
+	<mapping color=0 universe=1 propertyNum=255 deviceType=2 count=6     >red_oclock630</mapping>
+	<mapping color=1 universe=1 propertyNum=256 deviceType=2 count=6     >green_oclock630</mapping>
+	<mapping color=2 universe=1 propertyNum=257 deviceType=2 count=6     >blue_oclock630</mapping>
+	<mapping color=0 universe=1 propertyNum=258 deviceType=2 count=8     >red_oclock530</mapping>
+	<mapping color=1 universe=1 propertyNum=259 deviceType=2 count=8     >green_oclock530</mapping>
+	<mapping color=2 universe=1 propertyNum=260 deviceType=2 count=8     >blue_oclock530</mapping>
+	<mapping color=0 universe=1 propertyNum=261 deviceType=2 count=9     >red_oclock5</mapping>
+	<mapping color=1 universe=1 propertyNum=262 deviceType=2 count=9     >green_oclock5</mapping>
+	<mapping color=2 universe=1 propertyNum=263 deviceType=2 count=9     >blue_oclock5</mapping>
+	<mapping color=0 universe=1 propertyNum=264 deviceType=2 count=10    >red_lowerleft</mapping>
+	<mapping color=1 universe=1 propertyNum=265 deviceType=2 count=10    >green_lowerleft</mapping>
+	<mapping color=2 universe=1 propertyNum=266 deviceType=2 count=10    >blue_lowerleft</mapping>
+	<mapping color=0 universe=1 propertyNum=267 deviceType=2 count=11    >red_oclock4</mapping>
+	<mapping color=1 universe=1 propertyNum=268 deviceType=2 count=11    >green_oclock4</mapping>
+	<mapping color=2 universe=1 propertyNum=269 deviceType=2 count=11    >blue_oclock4</mapping>
+	<mapping color=0 universe=1 propertyNum=270 deviceType=2 count=12    >red_middleleft</mapping>
+	<mapping color=1 universe=1 propertyNum=271 deviceType=2 count=12    >green_middleleft</mapping>
+	<mapping color=2 universe=1 propertyNum=272 deviceType=2 count=12    >blue_middleleft</mapping>
+	<mapping color=0 universe=1 propertyNum=273 deviceType=2 count=13    >red_oclock1</mapping>
+	<mapping color=1 universe=1 propertyNum=274 deviceType=2 count=13    >green_oclock1</mapping>
+	<mapping color=2 universe=1 propertyNum=275 deviceType=2 count=13    >blue_oclock1</mapping>
+	<mapping color=0 universe=1 propertyNum=276 deviceType=2 count=14    >red_upperleft</mapping>
+	<mapping color=1 universe=1 propertyNum=277 deviceType=2 count=14    >green_upperleft</mapping>
+	<mapping color=2 universe=1 propertyNum=278 deviceType=2 count=14    >blue_upperleft</mapping>
+	<mapping color=0 universe=1 propertyNum=279 deviceType=3 count=1     >red_scrollwheel</mapping>
+	<mapping color=1 universe=1 propertyNum=280 deviceType=3 count=1     >green_scrollwheel</mapping>
+	<mapping color=2 universe=1 propertyNum=281 deviceType=3 count=1     >blue_scrollwheel</mapping>
+	<mapping color=0 universe=1 propertyNum=282 deviceType=3 count=2     >red_logo</mapping>
+	<mapping color=1 universe=1 propertyNum=283 deviceType=3 count=2     >green_logo</mapping>
+	<mapping color=2 universe=1 propertyNum=284 deviceType=3 count=2     >blue_logo</mapping>
 </map>
