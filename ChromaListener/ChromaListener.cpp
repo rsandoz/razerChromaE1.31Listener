@@ -15,7 +15,7 @@
 int iPort = DEFAULT_PORT;
 BOOL bInterface = FALSE;
 char szInterface[32];
-BOOL bDebug = TRUE;
+BOOL bDebug = FALSE;
 BOOL bMulticast = TRUE;
 Chroma impl;
 
@@ -118,12 +118,12 @@ int listen() {
 		if (bDebug)
 			printf("listening in unicast mode\n");
 
-	e131_packet_t packet;
+	//e131_packet_t packet;
 	// Read datagrams
 	for (;;) {
 		SOCKADDR_IN sender;
 		DWORD dwSenderSize = sizeof(sender);
-		int ret = recvfrom(s, (char*)packet.raw, 638, 0, (SOCKADDR*)&sender, (int*)&dwSenderSize);
+		int ret = recvfrom(s, (char*)impl.packet.raw, 638, 0, (SOCKADDR*)&sender, (int*)&dwSenderSize);
 		if (ret == SOCKET_ERROR) {
 			printf("recvfrom() failed; %d\n", WSAGetLastError());
 			break;
@@ -131,9 +131,9 @@ int listen() {
 		else if (ret == 0)
 			break;
 		else {
-			if (bDebug)
-				printf("\n[%s] received:", inet_ntoa(sender.sin_addr));
-			impl.command(&packet);
+			//if (bDebug)
+				//printf("\n[%s] received:", inet_ntoa(sender.sin_addr));
+			//impl.command(&packet);
 		}
 	}
 
@@ -146,6 +146,7 @@ int main(int argc, char **argv) {
 	BOOL test_for_init = impl.initialize();
 	if (test_for_init == TRUE) {
 		validateArgs(argc, argv);
+		impl.startThread();
 		return listen();
 	} else
 		printf("Unable to initialize Chroma.\n");

@@ -43,6 +43,16 @@ SETEFFECT setEffect = nullptr;
 DELETEEFFECT deleteEffect = nullptr;
 QUERYDEVICE queryDevice = nullptr;
 
+static void chromathread(void *param) {
+	Chroma* chroma = static_cast<Chroma*>(param);
+	chroma->chromaThread();
+}
+
+static void effectthread(void *param) {
+	Chroma* chroma = static_cast<Chroma*>(param);
+	chroma->effectThread();
+}
+
 /*
 BOOL Chroma::isDeviceConnected(RZDEVICEID deviceId) {
 if (queryDevice != nullptr) {
@@ -111,6 +121,7 @@ BOOL Chroma::initialize() {
 	for (UINT row = 0; row < ChromaSDK::Keypad::MAX_ROW; row++)
 		for (UINT col = 0; col < ChromaSDK::Keypad::MAX_COLUMN; col++)
 			keypad_effect.Color[row][col] = defval;
+
 
 	if (m_ChromaSDKModule == nullptr) {
 		m_ChromaSDKModule = LoadLibrary(CHROMASDKDLL);
@@ -212,12 +223,12 @@ BOOL Chroma::print(e131_packet_t* packet) {
 		printf("%02hhX", packet->property_values[i]);
 	printf(")");
 */
-	printf(" sn:%02X", packet->sequence_number);
-	printf(" u:%04X", packet->universe);
+	printf("\n sn:%02X", packet->sequence_number);
+	printf(" u:%04X", eflip(packet->universe));
 	printf(" sn:%s", packet->source_name);
-	printf(" pvc:%04X", packet->property_value_count);
+	printf(" pvc:%04X", eflip(packet->property_value_count));
 	printf(" pv:");
-	for (int i = 0; i<32; i++) //print first 32
+	for (int i = 1; i<eflip(packet->property_value_count); i++) //print first 32
 		printf("%02hhX", packet->property_values[i]);
 	return TRUE;
 }
@@ -239,13 +250,13 @@ void Chroma::updateColor(UINT colorComponent, UINT color, COLORREF* led) {
 BOOL Chroma::command(e131_packet_t* packet) {
 	if (bDebug)
 		print(packet);
-	UINT universe = (packet->universe & 0xff) * 0xFF + (packet->universe >> 8);
-	UINT property_value_count = (packet->property_value_count & 0xff) * 0xFF + (packet->property_value_count >> 8);
+	uint16_t universe = eflip(packet->universe);
+	uint16_t property_value_count = eflip(packet->property_value_count);
 	for (const auto& entry : propertyNumMap) {
-		if ((universe == entry.first.first) && (property_value_count> (entry.first.second+1))) {
+		if ((universe == entry.first.first) && (property_value_count> entry.first.second)) {
 			propertySet_t propertySet = entry.second;
 			for (mapping_t node : propertySet) {
-				UINT color = (packet->property_values[1 + entry.first.second]);
+				UINT color = (packet->property_values[entry.first.second]);
 				switch (node.deviceType) {
 					case 0: break;
 					case 1: updateColor(node.color, color, &keyboard_effect.Color[node.row][node.col]);	break;
@@ -258,11 +269,30 @@ BOOL Chroma::command(e131_packet_t* packet) {
 		}
 	}
 
-	RZRESULT resultKeyboard = createKeyboardEffect(ChromaSDK::Keyboard::CHROMA_CUSTOM, &keyboard_effect, nullptr);
-	RZRESULT resultMousemat = createMousepadEffect(ChromaSDK::Mousepad::CHROMA_CUSTOM, &mousemat_effect, nullptr);
-	RZRESULT resultMouse = createMouseEffect(ChromaSDK::Mouse::CHROMA_CUSTOM, &mouse_effect, nullptr);
-	RZRESULT resultHeadset = createHeadsetEffect(ChromaSDK::Headset::CHROMA_CUSTOM, &headset_effect, nullptr);
-	RZRESULT resultKeypad = createKeypadEffect(ChromaSDK::Keypad::CHROMA_CUSTOM, &keypad_effect, nullptr);
 
 	return TRUE;
+}
+
+void Chroma::startThread() {
+	_beginthread(chromathread, 0, this);
+	_beginthread(effectthread, 0, this);
+}
+
+void Chroma::chromaThread()
+{
+	while (command(&packet)) {
+		Sleep(5);
+	}
+}
+
+void Chroma::effectThread()
+{
+	while (command(&packet)) {
+		RZRESULT resultKeyboard = createKeyboardEffect(ChromaSDK::Keyboard::CHROMA_CUSTOM, &keyboard_effect, nullptr);
+		RZRESULT resultMousemat = createMousepadEffect(ChromaSDK::Mousepad::CHROMA_CUSTOM, &mousemat_effect, nullptr);
+		RZRESULT resultMouse = createMouseEffect(ChromaSDK::Mouse::CHROMA_CUSTOM, &mouse_effect, nullptr);
+		RZRESULT resultHeadset = createHeadsetEffect(ChromaSDK::Headset::CHROMA_CUSTOM, &headset_effect, nullptr);
+		RZRESULT resultKeypad = createKeypadEffect(ChromaSDK::Keypad::CHROMA_CUSTOM, &keypad_effect, nullptr);
+		Sleep(5);
+	}
 }

@@ -22,6 +22,9 @@ public:
 	Chroma();
 	~Chroma();
 	BOOL initialize();
+	void startThread();
+	void chromaThread();
+	void effectThread();
 
 	//void resetEffects(UINT DeviceType);
 	BOOL command(e131_packet_t* packet);
@@ -29,6 +32,7 @@ public:
 
 	//BOOL isDeviceConnected(RZDEVICEID DeviceId);
 	std::set<UINT> universeSet;
+	e131_packet_t packet;
 
 private:
 	HMODULE m_ChromaSDKModule;

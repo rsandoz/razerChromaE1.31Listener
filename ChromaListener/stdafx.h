@@ -5,6 +5,7 @@
 
 #pragma once
 
+#include <process.h>
 #include "targetver.h"
 #include <stdio.h>
 #include <tchar.h>
@@ -78,3 +79,7 @@ typedef union {
 	uint8_t raw[638];
 } e131_packet_t);
 extern BOOL bDebug;
+inline uint16_t eflip(uint16_t val) {
+	return (val & 0xff) * 0xFF + (val >> 8);
+}
+
