@@ -33,11 +33,13 @@ public:
 private:
 	HMODULE m_ChromaSDKModule;
 	BOOL mapPixels();
+	void updateColor(UINT colorComponent, UINT color, COLORREF* led);
 	typedef struct {
 		UINT deviceType;
 		UINT row;
 		UINT col;
 		UINT count;
+		UINT color;
 		const char* name;
 	} mapping_t;
 	typedef std::vector<mapping_t> propertySet_t;

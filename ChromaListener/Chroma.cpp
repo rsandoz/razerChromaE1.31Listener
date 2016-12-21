@@ -77,6 +77,7 @@ BOOL Chroma::mapPixels() {
 			localElement.row = atoi(element->Attribute("row") == NULL ? "0" : element->Attribute("row"));
 			localElement.col = atoi(element->Attribute("col") == NULL ? "0" : element->Attribute("col"));
 			localElement.count = atoi(element->Attribute("count") == NULL ? "0" : element->Attribute("count"));
+			localElement.color = atoi(element->Attribute("color") == NULL ? "0" : element->Attribute("color"));
 			localElement.name = _strdup(element->GetText());
 
 			pair<UINT, UINT> key = std::make_pair(universe, propnum);
@@ -221,25 +222,37 @@ BOOL Chroma::print(e131_packet_t* packet) {
 	return TRUE;
 }
 
+void Chroma::updateColor(UINT colorComponent, UINT color, COLORREF* led) {
+	switch (colorComponent) {
+	case 0:
+		*led = RGB(color, (*led & 0x00FF00) >> 8, (*led & 0xFF0000) >> 16);
+		break;
+	case 1:
+		*led = RGB((*led & 0x0000FF), color, (*led & 0xFF0000) >> 16);
+		break;
+	case 2:
+		*led = RGB((*led & 0x0000FF), (*led & 0x00FF00) >> 8, color);
+		break;
+	}
+}
+
 BOOL Chroma::command(e131_packet_t* packet) {
 	if (bDebug)
 		print(packet);
 	UINT universe = (packet->universe & 0xff) * 0xFF + (packet->universe >> 8);
 	UINT property_value_count = (packet->property_value_count & 0xff) * 0xFF + (packet->property_value_count >> 8);
 	for (const auto& entry : propertyNumMap) {
-		if ((universe == entry.first.first) && (property_value_count>3 * (entry.first.second+1))) {
+		if ((universe == entry.first.first) && (property_value_count> (entry.first.second+1))) {
 			propertySet_t propertySet = entry.second;
 			for (mapping_t node : propertySet) {
-				COLORREF rgb = RGB(packet->property_values[1 + 3 * entry.first.second]
-									, packet->property_values[2 + 3 * entry.first.second]
-									, packet->property_values[3 + 3 * entry.first.second]);
+				UINT color = (packet->property_values[1 + entry.first.second]);
 				switch (node.deviceType) {
 					case 0: break;
-					case 1: keyboard_effect.Color[node.row][node.col] = rgb;	break;
-					case 2: mousemat_effect.Color[node.count] = rgb;			break;
-					case 3: mouse_effect.Color[node.count] = rgb;				break;
-					case 4: headset_effect.Color[node.count] = rgb;				break;
-					case 5: keypad_effect.Color[node.row][node.col] = rgb;		break;
+					case 1: updateColor(node.color, color, &keyboard_effect.Color[node.row][node.col]);	break;
+					case 2: updateColor(node.color, color, &mousemat_effect.Color[node.count]);			break;
+					case 3: updateColor(node.color, color, &mouse_effect.Color[node.count]);			break;
+					case 4: updateColor(node.color, color, &headset_effect.Color[node.count]);			break;
+					case 5: updateColor(node.color, color, &keypad_effect.Color[node.row][node.col]);	break;
 				}
 			}
 		}

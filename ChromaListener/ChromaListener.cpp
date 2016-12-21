@@ -15,7 +15,7 @@
 int iPort = DEFAULT_PORT;
 BOOL bInterface = FALSE;
 char szInterface[32];
-BOOL bDebug = FALSE;
+BOOL bDebug = TRUE;
 BOOL bMulticast = TRUE;
 Chroma impl;
 
