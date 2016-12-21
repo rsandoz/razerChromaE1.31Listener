@@ -17,4 +17,5 @@ Quick Test:
 	Select RBG Cycle tab and check mixed colors
 	Check "Output to Lights" at top and the show should start
 
+Updated 12/20/2016 - added ability to control RGB elements individually.  refactored XML as appropriate.
 Updated 12/20/2016 - fixed many off by one issues, particularly with universes and propertys, wrote to use stl classes instead of arrays,  added multicast capability (made it the default).
