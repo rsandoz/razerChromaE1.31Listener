@@ -1,6 +1,28 @@
-#include "stdafx.h"
+#include <map>
+#include <stdio.h>
+
+#if defined(WIN32) || defined(_WIN64)
+#include <wtypes.h>
+#include <linux/kernel.h>
+#else
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <time.h>
+#include <ctype.h>
+#include <string.h>
+#include <stdlib.h>
+#endif
+
+#include "packet.h"
+#include <vector>
+#include <set>
+#include "RzChromaSDKTypes.h"
+#include "Chroma.h"
+
 #define _WINSOCK_DEPRECATED_NO_WARNINGS 1
-#define _CRT_SECURE_NO_WARNINGS 1
 
 // Command line options:
 //    receiver [-p:int] [-i:IP][-d:1 or 0]
@@ -8,15 +30,13 @@
 //           -i:IP    Local IP address to listen on
 //           -d:int   Debug (1 or 0) 
 //
-#include "Chroma.h"
 
 #define DEFAULT_PORT 5568
 
 int iPort = DEFAULT_PORT;
-BOOL bInterface = FALSE;
+int bInterface = 0;
 char szInterface[32];
-BOOL bDebug = FALSE;
-BOOL bMulticast = TRUE;
+int bMulticast = 1;
 Chroma impl;
 
 void usage() {
@@ -25,7 +45,7 @@ void usage() {
 	printf("       -i:IP    Local IP address to listen on (default:any)\n");
 	printf("       -u:int   Unicast (1 or 0 default:0)\n");
 	printf("       -d:int   Debug (1 or 0 default:0)\n");
-	ExitProcess(1);
+	exit(1);
 }
 
 void validateArgs(int argc, char **argv) {
@@ -38,8 +58,8 @@ void validateArgs(int argc, char **argv) {
 				break;
 			case 'i':	// Interface to receive datagrams on
 				if (strlen(argv[i]) > 3) {
-					bInterface = TRUE;
-					strcpy_s(szInterface, &argv[i][3]);
+					bInterface = 1;
+					strcpy_s(szInterface, strlen(szInterface)-1, &argv[i][3]);
 				}
 				break;
 			case 'u':	// Unicast mode
@@ -59,22 +79,26 @@ void validateArgs(int argc, char **argv) {
 }
 
 int listen() {
+
+#if defined(WIN32) || defined(WIN64)
 	WSADATA wsd;
 	if (WSAStartup(MAKEWORD(2, 2), &wsd) != 0) {
 		printf("WSAStartup failed!\n");
 		return 1;
 	}
+#endif
 
 	//create a UDP socket
 	SOCKET s = socket(AF_INET, SOCK_DGRAM, 0);
-	if (s == INVALID_SOCKET) {
+	//if (s == INVALID_SOCKET) {
+	if (s < 0) {
 		printf("socket() failed; %d\n", WSAGetLastError());
 		return 1;
 	}
 
 	if (bMulticast) {
 		//allow multiple sockets to use the same PORT number
-		UINT yes = 1;
+		unsigned int yes = 1;
 		if (setsockopt(s, SOL_SOCKET, SO_REUSEADDR, (const char*)&yes, sizeof(yes)) < 0) {
 			perror("Reusing ADDR failed");
 			return 1;
@@ -82,7 +106,7 @@ int listen() {
 	}
 
 	//set up destination address
-	SOCKADDR_IN local;
+	sockaddr_in local;
 	local.sin_family = AF_INET;
 	local.sin_port = htons((short)iPort);
 	if (bInterface)
@@ -91,15 +115,15 @@ int listen() {
 		local.sin_addr.s_addr = htonl(INADDR_ANY);
 	
 	//bind to receive address
-	if (bind(s, (SOCKADDR *)&local, sizeof(local)) == SOCKET_ERROR) {
+	if (bind(s, (sockaddr *)&local, sizeof(local)) == SOCKET_ERROR) {
 		printf("bind() failed: %d\n", WSAGetLastError());
 		return 1;
 	}
 
 	if (bMulticast)
-		for (UINT universe : impl.universeSet) {
-			BYTE b1 = (BYTE)(universe >> 8);
-			BYTE b2 = (BYTE)(universe & 0xff);
+		for (unsigned int universe : impl.universeSet) {
+			unsigned char b1 = (unsigned char)(universe >> 8);
+			unsigned char b2 = (unsigned char)(universe & 0xff);
 			char addr[16];
 			sprintf_s(addr,"239.255.%d.%d", b1, b2);
 			if (bDebug)
@@ -118,33 +142,31 @@ int listen() {
 		if (bDebug)
 			printf("listening in unicast mode\n");
 
-	//e131_packet_t packet;
 	// Read datagrams
 	for (;;) {
-		SOCKADDR_IN sender;
-		DWORD dwSenderSize = sizeof(sender);
-		int ret = recvfrom(s, (char*)impl.packet.raw, 638, 0, (SOCKADDR*)&sender, (int*)&dwSenderSize);
-		if (ret == SOCKET_ERROR) {
+		sockaddr_in sender;
+		unsigned long dwSenderSize = sizeof(sender);
+		//int ret = recvfrom(s, (char*)impl.packet.raw, 638, 0, (SOCKADDR*)&sender, (unsigned int*)&dwSenderSize);
+		int ret = recvfrom(s, (char*)impl.packet.raw, 638, 0, (SOCKADDR*)&sender, (socklen_t*)&dwSenderSize);
+		//if (ret == SOCKET_ERROR) {
+		if (ret <  0) {
 			printf("recvfrom() failed; %d\n", WSAGetLastError());
 			break;
-		}
-		else if (ret == 0)
+		} else if (ret == 0)
 			break;
-		else {
-			//if (bDebug)
-				//printf("\n[%s] received:", inet_ntoa(sender.sin_addr));
-			//impl.command(&packet);
-		}
 	}
 
 	closesocket(s);
+#if defined(WIN32) || defined(WIN64)
 	WSACleanup();
+#endif
 }
 
 
+
 int main(int argc, char **argv) {
-	BOOL test_for_init = impl.initialize();
-	if (test_for_init == TRUE) {
+	int test_for_init = impl.initialize();
+	if (test_for_init == 1) {
 		validateArgs(argc, argv);
 		impl.startThread();
 		return listen();
@@ -152,3 +174,5 @@ int main(int argc, char **argv) {
 		printf("Unable to initialize Chroma.\n");
 	return 0;
 }
+
+//http://ntrg.cs.tcd.ie/undergrad/4ba2/multicast/antony/example.html

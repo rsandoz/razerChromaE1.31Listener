@@ -22,3 +22,5 @@ Updated 12/21/2016 - added separate threads for razer calls and packet processin
 Updated 12/20/2016 - added ability to control RGB elements individually.  refactored XML as appropriate.
 
 Updated 12/20/2016 - fixed many off by one issues, particularly with universes and properties, wrote to use stl classes instead of arrays,  added multicast capability (made it the default).
+
+Updated 2/2/2017 - repurposed Terry Cain's linux driver to work under Windows as an alternative to the SDK

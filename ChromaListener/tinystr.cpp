@@ -1,4 +1,3 @@
-#include "stdafx.h"
 /*
 www.sourceforge.net/projects/tinyxml
 
